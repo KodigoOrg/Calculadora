@@ -16,6 +16,7 @@ public class Operaciones {
     }
     public double division(Numero a, Numero b) {
         if(b.getValor() == 0){
+            //Si se divide entre cero tendra la opcion de reconsdsiderar otro denominador
             System.out.println("No es posible dividir entre cero. Intentelo de nuevo");
             System.out.println("Ingrese un numero diferente de cero");
             Scanner input = new Scanner(System.in);
@@ -27,6 +28,8 @@ public class Operaciones {
             return pow(a.getValor(), b.getValor());
     }
 
+//Se pueden sacar varias raices pero la raiz cuadrada de -1 se envia una alerta
+// y la opcion de reconsiderar otro radicando para continuar
     public double radicacion(Numero a, Numero b) {
         if(a.getValor() == -1 && b.getValor() == 2){
             System.out.println("Numeros Complejos no estan incluidos.");
