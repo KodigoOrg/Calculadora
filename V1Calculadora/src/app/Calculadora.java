@@ -41,25 +41,24 @@ public class Calculadora {
     }
     public static int calcular(int opcion){
         Scanner input2 = new Scanner(System.in);
+        //Instancia para llamar a las operaciones
         Operaciones operacion = new Operaciones();
         Numero num1 = new Numero();
         Numero num2 = new Numero();
 
-        int continuar = 0;
-//TRY CATCH
-        if(opcion >=1 && opcion <= 4){
-            System.out.println("Ingrese el primer numero a calcular y presione Enter: ");
-            num1.setValor(input2.nextDouble());
-            System.out.println("Ingrese el segundo numero a calcular y presione Enter: ");
-            num2.setValor(input2.nextDouble());
-        }else if(opcion == 5 || opcion == 6){
-            System.out.println("Ingrese el numero base a calcular y presione Enter: ");
-            num1.setValor(input2.nextDouble());
-            System.out.println("Ingrese el numero Exponente/Raiz a calcular y presione Enter: ");
-            num2.setValor(input2.nextDouble());
-        }else{
-            System.out.println("El valor ingresado no es valido.");
-        }
+        int continuar = 1;
+
+            if(opcion >=1 && opcion <= 4){
+                System.out.println("Ingrese el primer numero a calcular y presione Enter: ");
+                num1.setValor(input2.nextDouble());
+                System.out.println("Ingrese el segundo numero a calcular y presione Enter: ");
+                num2.setValor(input2.nextDouble());
+            }else if(opcion == 5 || opcion == 6) {
+                System.out.println("Ingrese el numero base a calcular y presione Enter: ");
+                num1.setValor(input2.nextDouble());
+                System.out.println("Ingrese el numero Exponente/Raiz a calcular y presione Enter: ");
+                num2.setValor(input2.nextDouble());
+            }
 
         switch(opcion){
             case 1 -> {
@@ -99,16 +98,10 @@ public class Calculadora {
                 System.out.println("El resultado de la Raiz es: " + resultado);
             }
         }
-
+//Bloque de codigo para continuar o cortar el bucle
         System.out.println(" *********************************** ");
-        try{
-            System.out.println("Si desea continuar presione 1, sino 0");
-            continuar = input2.nextInt();
-        }catch(Exception e){
-            System.out.println("Debe ingresar un valor numerico ...Salida automatica activada ");
-        }finally{
-            System.out.println(" ");
-        }
+        System.out.println("Si desea continuar presione 1, sino 0");
+        continuar = input2.nextInt();
 
         return continuar;
     }
