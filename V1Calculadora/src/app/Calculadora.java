@@ -16,6 +16,7 @@ public class Calculadora {
         do{
             try{
                 int opcion = mostrarMenu(input);
+                //Calcular() solo devuelve un Entero para determina si seguir o no
                 salir = calcular(opcion);
             }catch(Exception e){
                 System.out.println("Valor Ingresado no valido "+e.getMessage());
@@ -28,7 +29,8 @@ public class Calculadora {
     }
 
     public static int mostrarMenu(Scanner input){
-        System.out.println("""
+        try{
+            System.out.println("""
                 1. Suma
                 2. Resta
                 3. Multiplicacion
@@ -36,6 +38,9 @@ public class Calculadora {
                 5. Potencia
                 6. Raices
                 Elige una opcion: """);
+        }catch(Exception e){
+            e.getMessage();
+        }
 
         return Integer.parseInt(input.nextLine());
     }
@@ -105,6 +110,5 @@ public class Calculadora {
 
         return continuar;
     }
-
 
 }

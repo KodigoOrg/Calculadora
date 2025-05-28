@@ -1,7 +1,12 @@
-# Calculadora
+# Autor:
+Walter Pleitez
+Java 21, Proyecto 1, Calculadora de consola
+LinkedIn: in/walter-pleitez-programming
+GitHub: https://github.com/Walter-Pleitez
+## Calculadora
 Calculadora para hacer las operaciones basicas como: 
 suma, resta, multiplicacion, division, potencia y todo tipo de raices 
-## Caracteristicas
+### Caracteristicas
 Cumple con todas las funciones de una calculadora normal en los proyectos
 de programacion pero no solo te permite sacar la raiz cuadrada, y esto debido
 a que la logica ocupada para calcular raices se basa en la ley de los exponentes
