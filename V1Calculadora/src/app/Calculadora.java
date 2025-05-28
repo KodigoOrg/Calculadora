@@ -1,16 +1,15 @@
 package app;
 
-import operaciones.*;
-
 import java.util.Scanner;
-
 
 public class Calculadora {
     public static void main(String[] args) {
+        //Solo contenedor de metodos principales por si fuese necesario varios Hilos
         interfazMain();
     }
 
     public static void interfazMain(){
+        //Metodo principal para el cual las de mas funciones se implementan y ejecutan
         int salir = 0;
         Scanner input = new Scanner(System.in);
 
@@ -42,6 +41,7 @@ public class Calculadora {
     }
     public static int calcular(int opcion){
         Scanner input2 = new Scanner(System.in);
+        Operaciones operacion = new Operaciones();
         Numero num1 = new Numero();
         Numero num2 = new Numero();
 
@@ -64,43 +64,37 @@ public class Calculadora {
         switch(opcion){
             case 1 -> {
                 System.out.println("***** SUMANDO *****");
-                Suma sumando = new Suma();
-                double resultado = sumando.suma(num1, num2);
+                double resultado = operacion.suma(num1, num2);
 
                 System.out.println("El resultado de la suma es: " + resultado);
             }
             case 2 -> {
                 System.out.println("***** RESTANDO *****");
-                Resta restando = new Resta();
-                double resultado = restando.resta(num1, num2);
+                double resultado = operacion.resta(num1, num2);
 
                 System.out.println("El resultado de la resta es: " + resultado);
             }
             case 3 -> {
                 System.out.println("***** MULTIPLICANDO *****");
-                Multiplicacion multiplicando = new Multiplicacion();
-                double resultado = multiplicando.multiplicacion(num1, num2);
+                double resultado = operacion.multiplicacion(num1, num2);
 
                 System.out.println("El resultado de la multiplicacion es: " + resultado);
             }
             case 4 -> {
                 System.out.println("***** DIVISION *****");
-                Division dividiendo = new Division();
-                double resultado = dividiendo.division(num1, num2);
+                double resultado = operacion.division(num1, num2);
 
                 System.out.println("El resultado de la division es: " + resultado);
             }
             case 5 -> {
                 System.out.println("***** Potenciacion *****");
-                Potencia potenciando = new Potencia();
-                double resultado = potenciando.potenciando(num1, num2);
+                double resultado = operacion.potenciando(num1, num2);
 
                 System.out.println("El resultado de la potencia es: " + resultado);
             }
             case 6 -> {
                 System.out.println("***** Calculando *****");
-                Raiz radicando = new Raiz();
-                double resultado = radicando.radicacion(num1, num2);
+                double resultado = operacion.radicacion(num1, num2);
 
                 System.out.println("El resultado de la Raiz es: " + resultado);
             }
