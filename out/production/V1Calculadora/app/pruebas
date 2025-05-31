@@ -1,0 +1,32 @@
+Prueba: Division entre cero
+Input: 6 / 0
+Output: "No es posible dividir entre cero. Intentelo de nuevo
+         Ingrese un numero diferente de cero: " (nuevo input)
+
+Prueba: Division entre letra
+Input: 7 / h
+Output: "Valor Ingresado no valido null" (nuevo menu de opciones)
+
+Prueba: Raiz cuadrada de -1
+Input: radicando: -1, Indice: 2
+Output: "Numeros Complejos no estan incluidos.
+         No se puede usar Raiz Cuadrada de -1
+         Ingrese un radicando diferente de -1: " (nuevo input)
+
+Prueba: Ingresando letra en raices
+Input: radicando: -1, Indice: g
+Output: "Valor Ingresado no valido null" (nuevo menu de opciones)
+
+Prueba: Raiz diferente de la cuadrada
+Input: Radicando: 27, Indice: 3
+Output: El resultado de la Raiz es 3.0
+
+Prueba: Valor invalido para continuacion del menu
+Input: g
+Output: "Valor Ingresado no valido null" (nuevo menu de opciones)
+
+Prueba: Valor invalido para Menu de opciones
+Input: h
+Output: "Valor Ingresado no valido For input string: "h"" (nuevo menu)
+
+

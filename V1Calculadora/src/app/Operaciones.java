@@ -31,11 +31,15 @@ public class Operaciones {
 //Se pueden sacar varias raices pero la raiz cuadrada de -1 se envia una alerta
 // y la opcion de reconsiderar otro radicando para continuar
     public double radicacion(Numero a, Numero b) {
+        Scanner input = new Scanner(System.in);
         if(a.getValor() == -1 && b.getValor() == 2){
             System.out.println("Numeros Complejos no estan incluidos.");
             System.out.println("No se puede usar Raiz Cuadrada de -1");
-            Scanner input = new Scanner(System.in);
             System.out.println("Ingrese un radicando diferente de -1");
+            a.setValor(input.nextDouble());
+        }else if(a.getValor() < 0){
+            System.out.println("No se puede obtener raiz de un numero negativo");
+            System.out.println("Ingrese un radicando no negativo");
             a.setValor(input.nextDouble());
         }
         return Math.pow( a.getValor(), 1.0/b.getValor() );
